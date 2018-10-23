@@ -28,7 +28,25 @@ Then,   display a message if the first integer is:
 * equal to,   or
 * greater than
 
-the second integer.
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+
+	cout<<"input two numbers :";
+	int first_num,sec_number=0;
+	cin>>first_num>>sec_number;
+	if(first_num<sec_number){
+		cout<<first_num<<"less than"<<sec_number;
+	}
+	else if(first_num>sec_number){
+			cout<<first_num<<"greater than"<<sec_number;;
+		}
+	else{
+			cout<<first_num<<"equal to"<<sec_number;
+		}
+}
 
 
 1. Test the condition   for each case separately,   so that   all three comparison operators are used   in the code. 
@@ -41,6 +59,18 @@ Start an integer value at   **1024**.
 Loop while it is greater than zero.
 
 Print the value (with a newline) and divide it by two each time through the loop. 
+
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	int i=1024;
+	while(i>0){
+		cout<<i<<endl;
+		i=i/2;
+	}
+	}
 
 
 ### Printing
@@ -55,6 +85,17 @@ Write a program using `print()` that, when run, prints out a tic-tac-toe board.
   |  |  
 ```
 
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	cout<<"  |  |   "<<endl;
+	cout<<"........."<<endl;
+	cout<<"  |  |   "<<endl;
+	cout<<"........."<<endl;
+	cout<<"  |  |   ";
+	}
 *Hint: you may find the optional arguments to `print` useful. You can read about them [here](https://docs.python.org/3.4/library/functions.html#print)*
 
 ### Printing #2 (challenge)
@@ -95,6 +136,20 @@ If we list all of the natural numbers under 41 that are a multiple of 3 or 5, we
 The sum of these numbers is 408.
 
 Find the sum of all the multiples of 3 or 5 below 1001. As a sanity check, the last two digits of the sum should be `68`.
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	int s = 0;
+	for(int i = 1001; i >0; i--){
+		if (i % 3 == 0 || i %5==0){
+			s+=i;
+		}
+	}
+
+	cout<<s;
+}
 
 ### Collatz Sequence
 
@@ -134,8 +189,18 @@ It is 37.0 degrees Celsius.
 Temperature F? 10
 It is -12.222222222222221 degrees Celsius.
 ```
-
-Want to be fancy (challenge)? Try to print the final temperature to two decimal places. For example, in the last case above we would print `-12.22` instead of `-12.222222222222221`. *Hint: Take a look at the [`round()`](https://docs.python.org/3.4/library/functions.html#round) function. Isn't Python great?*
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	float celsius, farenheit;
+	  cout<<"Enter temp. in Celsius: ";
+	  cin>>celsius;
+	   far = cel * 9/5 + 32;
+	  cout<<"Temp. in Fahrenheit: "<<farenheit;
+}
+Want to be fancy (challenge)? Try to print the enheitfinal temperature to two decimal places. For example, in the last case above we would print `-12.22` instead of `-12.222222222222221`. *Hint: Take a look at the [`round()`](https://docs.python.org/3.4/library/functions.html#round) function. Isn't Python great?*
 
 
 ## Investigating Data Structures
